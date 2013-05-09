@@ -1,40 +1,17 @@
 <html>
 <title>SoundGroups</title>
 <head>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script src="http://connect.soundcloud.com/sdk.js"></script>  
-	<script>
-	$(document).ready(function () {
-		  SC.initialize({
-		    client_id: "9ba9381d894c0cc4421485707925533d",
-		    redirect_uri: "http://localhost:8080/html/callback.html"
-		  });
 
-		  $("#connect").on("click", function(){
-		    SC.connect(function(){
-		      SC.get("/me", function(me){
-		        $("#username").text(me.username);
-		        $("#description").val(me.description);
-		      });
-		    });
-		  });
 
-		  $("#get_favourites").on("click", function(){
-		      SC.get("/me/favorites", function(favs){
-		      	console.log(favs)
-		      	$.each(favs, function(index, obj) {
-		      		$(".favourites").append("<li>" + obj.title + "</li>");
-		      	});
-		         
-		    });
-		  });
-	 });
-
-	</script>
 </head>
   
-<a href="#" class="button" id="connect">Connect to SoundCloud</a>
+<a href="#" class="button" id="connect"><img src="../images/btn-connect-l.png"/></a>
 <a href="#" class="button" id="get_favourites">Click for favourites</a>
 <div class="favourites"></div>
 </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.1.6/underscore-min.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
+    <script src="http://connect.soundcloud.com/sdk.js"></script>
+    <script src="../js/soundgroups.js"></script>
 </html>
