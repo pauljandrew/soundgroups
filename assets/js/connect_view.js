@@ -14,7 +14,7 @@
     },
 
     render: function(){
-      $(this.el).append("<a href='# class='button' id='connect'><img src='../images/btn-connect-l.png'/></a>");
+      $(this.el).append(Handlebars.templates.connect);
     },
 
     connect: function(){
