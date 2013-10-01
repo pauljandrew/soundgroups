@@ -1,2 +1,10 @@
 node_modules
-templates.js
+dist
+.tmp
+.sass-cache
+app/bower_components
+.bowerrc
+.editorconfig
+.jshintrc
+.travis.yml
+.gitattributes
