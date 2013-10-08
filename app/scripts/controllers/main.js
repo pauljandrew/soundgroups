@@ -9,14 +9,10 @@ angular.module('soundgroupsApp')
 
     SC.connect(function(){
         SC.get("/me", function(me){
-          $scope.userName = me.username;
+          $scope.username = me.username;
           $scope.userDesc = me.description;
+          $scope.$apply();
         });
       });
 
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
   });
