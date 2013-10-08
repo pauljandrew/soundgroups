@@ -10,6 +10,10 @@ angular.module('soundgroupsApp', [])
       .when('/callback', {
         templateUrl: 'callback.html'
       })
+      .when('/groups', {
+        templateUrl: 'views/groups.html',
+        controller: 'GroupsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
